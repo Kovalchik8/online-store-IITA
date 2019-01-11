@@ -1,6 +1,6 @@
 class Cart {
 
-  constructor() {
+  constructor() { 
     this.btnInCartSingle = $('.product-single__in-cart');
     this.cartCountSpan = $('.navbar__feature--cart span');
     this.cartItems = $('.cart__items');
