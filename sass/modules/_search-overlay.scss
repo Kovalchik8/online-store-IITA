@@ -1,0 +1,297 @@
+.search-overlay {
+
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, .98);
+  transition: .3s;
+  transform: scale(1.1);
+  visibility: hidden;
+  opacity: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+  &__top {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    input {
+      color: $colorBlackFontNav;
+      padding-left: 40px;
+      padding-right: 40px;
+      border: none;
+      font-size: 1.6rem;
+      font-weight: 300;
+      border-radius: 0;
+      background-color: transparent;
+      @media (max-width: 575.98px) {
+        font-size: 1.4rem;
+      }
+      &:focus {
+        box-shadow: none;
+        outline: none;
+        background-color: transparent;
+        color: $colorBlackFontNav;
+      }
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.4);
+      }
+    }
+    i.fa-search, i.fa-times {
+      color: $colorBlackFontNav;
+      font-size: 1.6rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    i.fa-search {
+      left: 15px;
+    }
+    i.fa-times {
+      right: 15px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+
+  // results
+  &__results {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .spinner-wrapper {
+      text-align: center;
+      i.fa-spinner {
+        font-size: 3.6rem;
+        color: $colorGrayText;
+        @media (max-width: 575.98px) {
+          font-size: 2.8rem;
+        }
+      }
+    }
+    .list-clothes {
+      display: flex;
+      flex-direction: column;
+       &__quantity {
+         display: flex;
+         margin-top: 15px;
+         font-size: .8rem;
+         @media (max-width: 575.98px) {
+           justify-content: center;
+           margin-top: 8px;
+         }
+
+         input[type='number'] {
+           text-align: center;
+           border: none;
+
+           &:focus {
+             box-shadow: none;
+             outline: none;
+           }
+
+           width: 24px;
+           height: 24px;
+
+           &::-webkit-inner-spin-button,
+           &::-webkit-outer-spin-button {
+             -webkit-appearance: none;
+             -moz-appearance: none;
+             appearance: none;
+             margin: 0;
+           }
+         }
+       }
+
+       &__less,
+       &__more {
+         width: 24px;
+         height: 24px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         cursor: pointer;
+
+         &:hover {
+           border: 1px solid #b6b7b9;
+         }
+
+         &::selection {
+           background: transparent;
+         }
+       }
+
+       &__less {
+         background-color: #eceef0;
+         border: 1px solid #eceef0;
+       }
+
+       &__more {
+         border: 1px solid #dadbdd;
+       }
+      &__cat {
+        font-size: 1.2rem;
+        color: $colorBlackFontNav;
+        text-decoration: underline;
+      }
+      &__title {
+        margin-top: 3px;
+        color: $colorBlackFontNav;
+      }
+      &__sizes {
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: 575.98px) {
+          justify-content: center;
+        }
+      }
+
+      &__size {
+        width: 30px;
+        height: 26px;
+        font-size: .9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 15px 10px 0;
+        border: 1px solid #dadbdd; 
+        cursor: pointer;
+        transition: .2s;
+        @media (max-width: 575.98px) {
+          margin: 5px;
+        }
+
+        &::selection {
+          background-color: transparent;
+        }
+
+        &.active {
+          background-color: #333;
+          color: #fff;
+          border: 1px solid #222;
+        }
+      }
+      &__right {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 991.98px) {
+          width: 100%;
+        }
+        .alert--cart {
+          display: none;
+          font-size: .9rem;
+          text-align: center;
+          border-radius: 0;
+        }
+      }
+      &__add-to-cart {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 15px;
+        i {
+          margin-left: 3px;
+        }
+      }
+      &__price {
+        text-align: center;
+        color: $colorBlackFontNav;
+        font-size: 1.4rem;  
+        @media (max-width: 991.98px) {
+          font-size: 1.2rem;
+        }
+        @media (max-width: 575.98px) {
+          margin-top: 10px;
+        }
+      }
+      li {
+        padding: 20px 0;
+        border-bottom: $borderBottomGray;
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: 575.98px) {
+          flex-direction: column;
+          align-items: center;
+        }
+        &:first-child {
+          border-top: $borderBottomGray;
+        }
+        a {
+          display: flex;
+          align-items: flex-start;
+          font-weight: 400;
+          @media (max-width: 575.98px) {
+            justify-content: center;
+            text-align: center;
+            font-size: .9rem;
+            margin: 4px 0;
+          }
+          img {
+            width: 100%;
+            max-width: 85px;
+            margin-right: 15px;
+            @media (max-width: 575.98px) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      &__desc {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .list-general {
+      display: flex;
+      flex-direction: column;
+      li {
+        padding: 20px 0;
+        border-bottom: $borderBottomGray;
+        a {
+          display: flex;
+          align-items: flex-start;
+          img {
+            max-width: 85px;
+          }
+        }
+      }
+      &__content {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        span {
+          &:first-child {
+            color: $colorBlackFontNav;
+            font-size: 1.2rem;
+            font-weight: 400;
+          }
+          &:last-child {
+            color: $colorGrayText;
+            margin-top: 10px;
+            font-size: .9rem;
+            @media (max-width: 575.98px) {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__no-result {
+    display: flex;
+    justify-content: center;
+    span {
+      margin-top: 15px;
+    }
+  }
+
+
+}

@@ -1,0 +1,55 @@
+
+.office {
+
+  .product-single__terms {
+    margin-top: 30px;
+  }
+
+  &__form {
+    margin-top: 30px;
+    .form-title {
+      font-weight: 400;
+      font-size: .9rem;
+      position: absolute;
+      top: -15px;
+      left: 10px;
+      padding: 3px;
+      background-color: #fff;
+    }
+    label {
+      margin-bottom: 0;
+      font-size: .8rem;
+    }
+    input,
+    textarea, select {
+      border-radius: 0;
+      line-height: 1.2;
+      min-height: 25px;
+      max-height: 200px;
+      font-size: .9rem;
+
+      &:focus {
+        box-shadow: none;
+        border-color: #ced4da;
+        border-top: 1px solid $colorBlackFontNav !important;
+      }
+    }
+    select {
+      color: $colorBlackFontNav;
+    }
+    
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    .btn {
+      margin: 0 5px;
+    }
+  }
+
+  &__save, &__cancel {
+    display: none;
+  }
+
+}

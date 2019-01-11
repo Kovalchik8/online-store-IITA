@@ -1,0 +1,149 @@
+.section-slider {
+
+  &__item {
+    &:hover .clothes-layer {
+      @media (min-width: 767.98px) {
+        display: flex;
+      }
+    }
+    a {
+      display: block;
+      position: relative;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+   &__header {
+     text-transform: uppercase;
+     padding-top: 25px;
+     padding-bottom: 25px;
+   }
+
+   &__name {
+     margin-right: 5px;
+     margin-left: 5px;
+     font-weight: 300;
+     color: $colorGrayText;
+     @media (max-width: 767.98px) {
+       font-size: .9rem;
+     }
+     @media (max-width: 575.98px) {
+       display: none;
+     }
+   }
+
+   &__label {
+     display: flex;
+     align-items: center;
+     font-size: 2.8rem;
+     font-size: 3.6rem;
+     position: relative;
+     font-family: $fontFamilyLora;
+   }
+
+   &__view-all {
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+
+     a {
+       color: $colorGrayText;
+       font-size: 1.1rem;
+
+       &:hover {
+         color: $colorGrayTextHover;
+       }
+
+       i {
+         margin-left: 5px;
+       }
+     }
+   }
+
+   &__desc {
+     margin-top: 15px;
+     font-size: 1rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+     span:last-child {
+       font-weight: 400;
+       text-transform: uppercase;
+       text-align: center;
+       padding: 0 5px;
+       @media (max-width: 575.98px) {
+         font-size: .9rem;
+       }
+     }
+
+     button {
+       margin-top: 15px;
+     }
+   }
+
+   &__prev,
+   &__next {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     font-size: 1.8rem;
+     cursor: pointer;
+     z-index: 99;
+     color: $colorBlackFontNav;
+     padding: 10px;
+     background-color: #fff;
+     @media (max-width: 575.98px) {
+       padding: 5px 10px;
+     }
+   }
+
+   &__prev {
+     opacity: .4;
+     left: -1px;  
+   }
+
+   &__next {
+     right: -1px;
+   }
+
+  .slider-header {
+    text-transform: uppercase;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    &__name {
+      font-size: 1.4rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      @media (max-width: 767.98px) {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    }
+    &__view-all {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      @media (max-width: 767.98px) {
+        margin-top: 5px;
+        justify-content: center;
+      }
+      a {
+        color: $colorGrayText;
+        font-size: 1.1rem;
+        @media (max-width: 767.98px) {
+          font-size: 1rem;
+        }
+        &:hover {
+          color: $colorGrayTextHover;
+        }
+        i {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+}

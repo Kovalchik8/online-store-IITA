@@ -1,0 +1,119 @@
+.modal {
+
+  &__title {
+    font-size: 1.1rem;
+  }
+
+  &-header {
+    background-color: $colorBlackFontNav;
+    color: snow;
+    border-radius: 0;
+    padding: 10px;
+    .close {
+      color: snow;
+      &:hover, &:focus {
+        color: snow !important;
+        outline: none;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 1.1rem;
+    font-weight: normal;
+  }
+
+  label {
+    margin-bottom: 0;
+    font-size: .8rem;
+  }
+  input, textarea {
+    border-radius: 0;
+    line-height: 1.2;
+    min-height: 25px;
+    max-height: 200px;
+    &[name="goods"] {
+      visibility: hidden;
+      position: absolute;
+    }
+    &:focus {
+      box-shadow: none;
+      border-color: #ced4da;
+      border-top: 1px solid $colorBlackFontNav !important;
+    }
+  }
+  &-content {
+    border-radius: 0;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  &__submit {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 1.2rem;
+    }
+  }
+  &__loader {
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+  &-with-alert {
+    max-width: 500px;
+  }
+  &__result {
+    margin-top: 15px;
+    display: none;
+    .alert {
+      border-radius: 0;
+    }
+  }
+
+}
+
+.modal-feedback, .modal-question, .modal-report {
+
+  form {
+    margin-top: 20px;
+  }
+
+}
+
+.modal-table {
+  
+  table {
+    font-size: .9rem;
+    text-transform: uppercase;
+  }
+
+  &__headline {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  th, td {
+    padding: 15px 30px;
+    text-align: center;
+  }
+  th {
+    font-weight: 400;
+  }
+  &__th-ru {
+    min-width: 200px;
+    @media (max-width: 991.98px) {
+      min-width: auto;
+    }
+    text-align: left !important;
+  }
+  td:nth-child(2) {
+    text-align: left !important;
+  }
+  &__desc {
+    font-size: .8rem;
+    font-weight: 400;
+  }
+
+}

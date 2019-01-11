@@ -1,0 +1,131 @@
+.navbar {
+  border-bottom: $borderBottomGray;
+  padding-bottom: 0;
+  padding-top: 0;
+
+  &__cart {
+    display: none;
+    @media (max-width: 991.98px) {
+      display: block;
+      margin-left: auto !important; 
+      padding: 18px 0 14px 0 !important;
+    }
+  }
+
+  &-toggler {
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  &-brand {
+    img{
+      max-width: 130px;
+    }
+    font-size: 1.6rem;
+    span {
+      color: $colorGrayText;
+    }
+  }
+
+  .nav-item {
+    &.active {
+      .nav-link {
+        border-bottom: 2px solid $colorBlackFontNav;
+        color: $colorBlackFontNav;
+      }
+    }
+
+    &--expandable {
+      @media (min-width: 991.98px) {
+        &:hover {
+          border-bottom: 1px solid $colorBlackFontNav;
+          .expandable {
+            display: block;
+          }
+        }
+      }
+    }
+    
+    .nav-link {
+      color: $colorBlackFontNav;
+      font-weight: 400;
+      font-size: 1.1rem;
+      padding: 1.2rem 0;
+      margin: 0 1rem;
+      @media (max-width: 991.98px) {
+        padding: 8px 0;
+      }
+    }
+  }
+  .dropdown-menu {
+    border-radius: 0;
+    border-color: #dfe0e1;
+  }
+
+  &__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    @media (max-width: 991.98px) {
+      justify-content: center;
+    }
+    .navbar__feature--cart {
+      @media (max-width: 991.98px) {
+        display:none;
+      }
+    }
+    li {
+      &:hover {
+        text-decoration: none;
+        color: $colorGrayTextHover;
+      }
+      a {
+        color: $colorGrayText;
+        &:hover {
+          text-decoration: none;
+          color: $colorGrayTextHover;
+        }
+      }
+    }
+  }
+
+  &__feature {
+    cursor: pointer;
+    padding: 1.2rem 0;
+    font-size: 1rem;
+    margin: 0 10px;
+    color: $colorGrayText;
+    a {
+      font-size: 1rem;
+      padding: 5px 0;
+    }
+    i {
+      color: $colorGrayText;
+      font-size: 1.6rem;
+    }
+    &:hover i {
+      color: $colorBlackFontNav;
+    }
+    &--cart {
+      position: relative;
+      span {
+        position: absolute;
+        top: 6px;
+        right: -10px;
+        height: 20px; 
+        width: 20px;
+        border-radius: 50%;
+        background-color: $colorRedSpan;
+        color: #fff;
+        font-size: .8rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 20px;
+      }
+    }
+  }
+
+}

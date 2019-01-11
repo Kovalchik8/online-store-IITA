@@ -1,0 +1,63 @@
+
+.information {
+
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px;
+    @media (max-width: 767.98px) {
+      margin-top: 0;
+      text-align: center;
+    }
+    i {
+      font-size: 4rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin: 10px 0 15px 0;
+    }
+    
+  }
+
+  &__contacts {
+    margin-top: 20px;
+    text-align: center;
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+    .expandable-help__phones {
+      display: inline-block;
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        a {
+          font-size: 1.2rem;
+          margin-right: 7px;
+          color: $colorBlackFontNav;
+          font-weight: 400;
+        }
+      }
+      
+    }
+  }
+
+  &__feedback {
+    margin-top: 20px;
+    text-align: center;
+    .expandable-help__feedback {
+      display: inline-flex;
+      .btn {
+        padding-left: 60px;
+        padding-right: 60px;
+        @media (max-width: 767.98px) {
+          padding-left: 20px;
+          padding-right: 20px; 
+        }
+      }
+    }
+  }
+
+}

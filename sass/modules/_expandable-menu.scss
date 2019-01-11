@@ -1,0 +1,134 @@
+.expandable {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: absolute;
+  top: 69px;
+  left: 0;
+  z-index: 999; 
+  background-color: #fff;
+  display: none;
+  border-top: $borderBottomGray;
+  border-bottom: $borderBottomGray;
+
+  &-catalog {
+    &__categories {
+      display: flex;
+      justify-content: center;
+      ul {
+        margin-right: 60px;
+        li {
+          text-align: left;
+          a {
+            color: $colorGrayText;
+            display: block;
+            padding: 3px;
+            &:hover {
+              color: $colorGrayTextHover;
+            }
+          }
+        }
+      }
+    }
+    &__aside {
+      display: flex;
+      justify-content: center;
+    }
+    &__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width:250px;
+      height:250px;
+      background-size: cover;
+      background-position: center top;
+      i {
+        font-size: 2rem;
+        color: $colorGrayText;
+      }
+    }
+  }
+
+  // menu help
+  &-help {
+    &__menu {
+      .thanks__info {
+        margin-top: 0;
+        
+      }
+      .nav-pills {
+        .nav-item {
+          .nav-link {
+            padding: 5px 10px;
+            margin: 5px; 
+          }
+        }
+      }
+      .tab-content {
+        font-size: .9rem;
+      }
+      
+    }
+    &__menu-text {
+      font-size: .9rem;
+      color: $colorGrayText;
+    }
+    &__feedback {
+      display: flex;
+      flex-direction: column;
+      .btn {
+        margin: 5px 0;
+      }
+    }
+    &__contacts {
+      display: flex;
+      justify-content: center;
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          a {
+            display: inline-block;
+            padding: 3px;
+            font-size: 1.2rem;
+            color: $colorBlackFontNav;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    &__delivery {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      img {
+        height: 65px;
+        width: 65px;
+      }
+    }
+    &__delivery-item {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      margin: 0 10px;
+      span {
+        font-size: .8rem;
+      }
+    }
+    &__mobile-icon {
+      display: inline-block;
+      height: 25px;
+      width: 25px;
+      margin-left: 5px;
+      background-size: cover;
+      &--telegram {
+        height: 26px;
+        width: 26px;
+      } 
+      &--viber {
+        height: 28px;
+        width: 28px;
+      }
+    }
+  }
+
+}

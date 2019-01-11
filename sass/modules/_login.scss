@@ -1,0 +1,120 @@
+
+// DEFAULT LOGIN PAGE
+body.login {
+  background-color: #fff;
+}
+body.login .button-primary,
+body.login .button-primary[disabled] {
+  border-radius: 0;
+  background-color: #222 !important;
+  color: snow;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  &:hover, &:active, &:focus {
+    background-color: #3b3b3b;
+    border-top: none;
+    box-shadow: none;
+  }
+}
+.login #login_error,
+.login .message,
+.login .success {
+  border-left: 4px solid $colorBlackFontNav;
+}
+
+.login form .input,
+.login form input[type=checkbox] {
+  border-radius: 0;
+
+  &:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+    border-top: 1px solid $colorBlackFontNav !important;
+  }
+}
+
+input[type=checkbox]:checked:before {
+  color: $colorBlackFontNav;
+}
+
+.login h1 a {
+  background-image: url('img/logo.png');
+  width: 175px;
+  background-size: contain;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.login form {
+  box-shadow: none;
+  border: 1px solid rgba(119, 119, 119, .4);
+}
+
+
+// PLUGIN AJAX Login and Registration modal popup
+.lrm-user-modal-container {
+  max-width: 475px;
+  border-radius: 0;
+}
+
+.lrm-close-form {
+  right: -10px;
+}
+
+.lrm-user-modal-container .lrm-switcher a {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+  color: $colorBlackFontNav;
+}
+
+.lrm-form .fieldset {
+  margin: 20px 0 !important;
+}
+
+.lrm-form input {
+  border-radius: 0;
+  max-height: 200px;
+  font-size: .9rem;
+  &:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+    border: none;
+    border-top: 1px solid $colorBlackFontNav !important;
+  }
+}
+
+.lrm-form input.has-padding {
+  padding: 12px 10px 12px 50px !important;
+}
+
+.lrm-form button[type=submit],
+.lrm-form #buddypress input[type=submit],
+.lrm-form input[type=submit] {
+  font-size: 1.1rem;
+  padding: 10px 0 !important;
+  font-weight: normal;
+}
+
+#remember-me {
+  position: relative;
+  top: 2px;
+}
+
+.lrm-switch-to--login:before,
+.lrm-switch-to--register:before {
+  display: none;
+}
+
+.lrm-form a.button,
+.lrm-form button,
+.lrm-form button[type=submit],
+.lrm-form #buddypress input[type=submit],
+.lrm-form input[type=submit] {
+  background-color: $colorBlackFontNav;
+  border-radius: 0;
+}

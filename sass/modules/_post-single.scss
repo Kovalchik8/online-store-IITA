@@ -1,0 +1,41 @@
+.post-single {
+
+  &__img {
+    width: 90%;
+    max-width: 500px;
+    height: 300px;
+    background-position: center top;
+    background-size: cover;
+    display: inline-block;
+  }
+  &__content {
+    text-align: center;
+    margin-top: 30px;
+  }
+  &__buttons { 
+    .btn {
+      margin: 10px;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+  &__prev-post {
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f104";
+      font-size: 1.2rem;
+      margin-right: 10px;
+    }
+  }
+  &__next-post {
+    &::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f105";
+      font-size: 1.2rem;
+      margin-left: 10px;
+    }
+  }
+
+}

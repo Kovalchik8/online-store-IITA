@@ -1,0 +1,51 @@
+.thanks {
+
+  text-align: center;
+
+  p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+
+  &__info {
+    justify-content: center;
+    margin-top: 40px;
+    .nav-item{
+      .nav-link { 
+        border-radius: 0;
+        color: $colorBlackFontNav;
+        font-weight: 400;
+        &.active {
+          background-color: transparent;
+          border: 1px solid #222;
+        }
+      }
+    }
+  }
+  .tab-pane {
+    text-align: left;
+    span {
+      display: block;
+      padding: 6px 0;
+    }
+  }
+  &__payment {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .btn {
+      margin-bottom: 10px;
+      width: 50%;
+      min-width: 270px;
+    }
+  }
+  &__go-shopping {
+    margin-top: 25px; 
+  }
+  &__order-number {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+}

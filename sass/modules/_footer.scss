@@ -1,0 +1,121 @@
+.footer {
+  background-color: rgba(242, 242, 242, .28);
+  color: $colorGrayText;
+  margin-top: 60px;
+  padding: 60px 0;
+  border-top: $borderBottomGray;
+  font-size: .9rem;
+
+  @media (max-width: 991.98px) {
+    padding-top: 10px;
+    margin-top: 30px;
+  }
+
+
+  &__item {
+    @media (max-width: 991.98px) {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__about-us {
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $colorBlackFontNav;
+    font-weight: 400;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: $borderBottomGray;
+    @media (max-width: 991.98px) {
+      padding-bottom: 0;
+      margin-bottom: 10px;
+      border-bottom: none;
+    }
+  }
+
+  &__contacts {
+    @media (max-width: 767.98px) {
+      align-items: center;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      a {
+        color: $colorGrayText;
+        padding: 4px;
+        &:hover {
+          color: $colorBlackFontNav;
+        }
+        i {
+          margin-right: 3px;
+          &.fa-phone {
+            font-size: .8rem; 
+          }
+          &.fa-envelope {
+            position: relative;
+            bottom: -1px;
+          }
+        }
+      }
+    }
+  }
+  &__social {
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+    ul {
+      display: flex;
+      li {
+        margin-right: 8px;
+        a {
+          font-size: 1.6rem;
+          color: $colorGrayText;
+          &:hover {
+            color: $colorBlackFontNav;
+          }
+        }
+      }
+    }
+  }
+  &__menu {
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+    ul {
+      li {
+        a {
+          display: block;
+          padding: 3px 0;
+          font-size: 1rem;
+          color: $colorGrayText; 
+          &:hover {
+            color: $colorBlackFontNav;
+          }
+        }
+      }
+    }
+  }
+  &__mobile-icon {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    background-size: cover;
+    &--telegram {
+      height: 21px;
+      width: 21px;
+    }
+    &--viber {
+      height: 23px;
+      width: 23px;
+    }
+  }
+
+}
